@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="js/script.js"></script>
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <title>Kalkulator walut</title>
+</head>
+
+<body>
+
+    <form class="js-form form">
+        <fieldset class="form__fieldset">
+            <legend class="form__legend">Przelicznik walut</legend>
+            <p>
+                <label>
+                    <span class="form__labelText">Wpisz wartość w zł</span> <input class="js-value form__input"
+                        type="number" min="0.01" step="any" required>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <span class="form__labelText">Wybierz walutę</span>
+                    <select class="js-currency form__select">
+                        <option value="USD">Dolar ($)</option>
+                        <option value="EUR">Euro (€)</option>
+                        <option value="JPY">Jen (¥)</option>
+                    </select>
+                </label>
+            </p>
+        </fieldset>
+        <div class="container">
+            <p>
+                <button class="resultButton">Policz!</button>
+            </p>
+    </form>
+
+    <p class="result">Twoja wartość: <span class="js-result"></span></p>
+    </div>
+
+</body>
+
+</html>
