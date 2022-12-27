@@ -7,6 +7,7 @@
     const RateUSD = 0.229
     const RateEUR = 0.215
     const RateJPY = 30.433
+    const RateGBP = 0.188
 
     formElement.addEventListener("submit", (event) => {
         event.preventDefault();
@@ -27,6 +28,10 @@
 
             case "JPY":
                 result = value * RateJPY;
+                break;
+
+            case "GBP":
+                result = value * RateGBP;
         }
 
         resultElement.innerText = `${result.toFixed(2)}`
