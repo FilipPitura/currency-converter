@@ -4,7 +4,9 @@ body {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    background-color: rgb(31, 29, 29);
+    background-image: url(../images/backgroundImage.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 html {
