@@ -9,3 +9,7 @@ This is my currency converter with 4 currencies (dollar, euro, yen, pound).  You
 ### Here is link to my website
 
 https://filippitura.github.io/currency-converter/
+
+### Technologies I used:
+- BEM
+- JavaScript
