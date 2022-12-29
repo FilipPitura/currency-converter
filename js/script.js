@@ -1,6 +1,5 @@
 {
-    const calculationResult = (currency, value) => {
-
+    const calculateResult = (currency, value) => {
         const RateUSD = 0.229
         const RateEUR = 0.215
         const RateJPY = 30.433
@@ -21,29 +20,29 @@
         }
     };
 
-    const ResultText = (result, currency) => {
+    const updateResultText = (result, currency) => {
         const resultElement = document.querySelector(".js-result");
         resultElement.innerHTML = `<strong>${result.toFixed(2)}</strong> ${currency}`;
     }
 
-    const formSubmit = (event) => {
+    const onFormSubmit = (event) => {
         event.preventDefault();
 
         const currencyElement = document.querySelector(".js-currency");
         const valueElement = document.querySelector(".js-value");
-      
+
         const value = +valueElement.value;
         const currency = currencyElement.value;
 
-        const result = calculationResult(currency, value);
+        const result = calculateResult(currency, value);
 
-        ResultText(result, currency);
+        updateResultText(result, currency);
     };
 
     const init = () => {
         const formElement = document.querySelector(".js-form");
 
-        formElement.addEventListener("submit", formSubmit);
+        formElement.addEventListener("submit", onFormSubmit);
     };
 
     init();
